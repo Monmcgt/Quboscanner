@@ -1,12 +1,12 @@
 package me.replydev.qubo.gui;
 
-import com.intellij.uiDesigner.core.*;
+import com.intellij.uiDesigner.core.GridConstraints;
+import com.intellij.uiDesigner.core.GridLayoutManager;
 import me.replydev.qubo.Info;
 import me.replydev.qubo.InputData;
 import me.replydev.qubo.QuboInstance;
 import me.replydev.utils.InvalidRangeException;
 import me.replydev.utils.Log;
-import me.replydev.versionChecker.VersionChecker;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
@@ -17,7 +17,9 @@ import javax.swing.text.StyleContext;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
-import java.awt.event.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -46,7 +48,7 @@ public class MainWindow extends JFrame {
     public MainWindow() {
         setUndecorated(true);
         meMyselfAndI = this;
-        VersionChecker.checkNewVersion();
+//        VersionChecker.checkNewVersion();
         me.setText(" QuboScanner - " + Info.version + " " + Info.otherVersionInfo + " | ");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1100, 750);
