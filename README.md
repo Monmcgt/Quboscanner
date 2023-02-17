@@ -1,5 +1,9 @@
 # Quboscanner
 
+## Branch `0.3.7-noupdate`
+
+Update check is disabled in this branch.
+
 ## Usage
 
 Java 8+ is required to run the scanner.
