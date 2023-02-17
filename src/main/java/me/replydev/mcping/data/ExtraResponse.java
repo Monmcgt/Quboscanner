@@ -8,8 +8,8 @@ public class ExtraResponse extends MCResponse {
     @SerializedName("description")
     private ExtraDescription description;
 
-    public FinalResponse toFinalResponse(){
-        return new FinalResponse(players,version,favicon,description.getText());
+    public FinalResponse toFinalResponse() {
+        return new FinalResponse(players, version, favicon, description.getText());
     }
 
 }

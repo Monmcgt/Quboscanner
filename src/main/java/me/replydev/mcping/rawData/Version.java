@@ -8,12 +8,11 @@ public class Version {
     @SerializedName("protocol")
     private int protocol;
 
-
-    public void setName(String a){
-        name = a;
-    }
-
     public String getName() {
         return this.name;
+    }
+
+    public void setName(String a) {
+        name = a;
     }
 }

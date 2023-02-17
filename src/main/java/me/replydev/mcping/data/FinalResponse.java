@@ -8,7 +8,7 @@ public class FinalResponse extends MCResponse {
     private final String description;
 
 
-    public FinalResponse(Players players, Version version,String favicon,String description){
+    public FinalResponse(Players players, Version version, String favicon, String description) {
         this.description = description;
         this.favicon = favicon;
         this.players = players;

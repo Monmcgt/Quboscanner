@@ -1,7 +1,9 @@
 package me.replydev.mcping.data;
 
 import com.google.gson.annotations.SerializedName;
-import me.replydev.mcping.rawData.*;
+import me.replydev.mcping.rawData.ForgeModInfo;
+import me.replydev.mcping.rawData.Players;
+import me.replydev.mcping.rawData.Version;
 
 public class ForgeResponseOld {
 
@@ -17,8 +19,8 @@ public class ForgeResponseOld {
     @SerializedName("modinfo")
     private ForgeModInfo modinfo;
 
-    public FinalResponse toFinalResponse(){
+    public FinalResponse toFinalResponse() {
         version.setName(version.getName() + " FML with " + modinfo.getNMods() + " mods");
-        return new FinalResponse(players,version,"",description);
+        return new FinalResponse(players, version, "", description);
     }
 }

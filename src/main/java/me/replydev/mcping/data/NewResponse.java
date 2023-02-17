@@ -11,22 +11,22 @@ public class NewResponse extends MCResponse {
     private final Description description;
 
 
-    public void setVersion(String a){
-        version.setName(a);
-    }
-
-    public NewResponse(){
+    public NewResponse() {
         description = new Description();
         players = new Players();
         version = new Version();
+    }
+
+    public void setVersion(String a) {
+        version.setName(a);
     }
 
     public Description getDescription() {
         return this.description;
     }
 
-    public FinalResponse toFinalResponse(){
-        return new FinalResponse(players,version,favicon,description.getText());
+    public FinalResponse toFinalResponse() {
+        return new FinalResponse(players, version, favicon, description.getText());
     }
 
 }

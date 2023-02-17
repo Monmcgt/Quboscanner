@@ -20,8 +20,8 @@ public class ForgeResponseTranslate {
     @SerializedName("modinfo")
     private ForgeModInfo modinfo;
 
-    public FinalResponse toFinalResponse(){
+    public FinalResponse toFinalResponse() {
         version.setName(version.getName() + " FML with " + modinfo.getNMods() + " mods");
-        return new FinalResponse(players,version,"",description.getTranslate());
+        return new FinalResponse(players, version, "", description.getTranslate());
     }
 }
