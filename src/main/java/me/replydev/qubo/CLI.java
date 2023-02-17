@@ -32,7 +32,7 @@ public class CLI {
         FileUtils.createFolder("outputs");
         ExecutorService inputService = Executors.newSingleThreadExecutor();
         inputService.execute(new KeyboardThread());
-        if (Arrays.equals(new String[]{"-txt"}, a))
+        if (Arrays.equals(new String[] {"-txt"}, a))
             txtRun();
         else
             standardRun(a);
